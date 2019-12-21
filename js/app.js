@@ -4,7 +4,8 @@ var input = document.querySelector('.input'),
     ul = document.querySelector('.text-value'),
     btnReset = document.querySelector('.reset'),
     savebtn = document.querySelector('.save-btn'),
-    addBtn = document.querySelector('.add-btn');
+    addBtn = document.querySelector('.add-btn'),
+    modal = document.querySelector('.modal-save');
 addBtn.addEventListener('click', function (key) {
   if (input.value != '') {
     generateToDo();
@@ -61,6 +62,10 @@ function resetBtn(item) {
 function saveList() {
   savebtn.addEventListener('click', function () {
     localStorage.setItem('todos', ul.innerHTML);
+    modal.style.animation = 'modal 2s ease-in';
+    setTimeout(function () {
+      modal.style.animation = '';
+    }, 2000);
   });
 }
 
