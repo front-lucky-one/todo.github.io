@@ -410,7 +410,7 @@ button{
   border-radius:30px;
   margin:0 auto;
   background-color:#214150;
-  padding-left:10px;
+  padding:0 35px 0 15px;
   color:white; }
 
 .wrapp-input{
